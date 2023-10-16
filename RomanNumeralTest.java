@@ -62,4 +62,23 @@ public class RomanNumeralTest {
         RomanNumeral roma = new RomanNumeral();
         assertEquals(0, roma.romanToInt("VV"));
     }
+
+    @Test
+    public void nullEntry(){
+        RomanNumeral roma = new RomanNumeral();
+        assertEquals(0, roma.romanToInt(" "));
+    }
+
+    @Test
+    public void a_Number() {
+        RomanNumeral roma = new RomanNumeral();
+        assertEquals(0, roma.romanToInt("1"));
+    }
+
+    @Test
+    public void testNumberAndValidLetter() {
+        RomanNumeral roma = new RomanNumeral();
+        assertEquals(0, roma.romanToInt("X1I7Z"));
+    }
+
 }
